@@ -11,6 +11,6 @@ clusterName=$1
 configFilePath=$2
 kind create cluster --name ${clusterName} --config ${configFilePath}
 kubectl get pods -n kube-system
-kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+kubectl apply -f https://docs.projectcalico.org/v3.23/manifests/calico.yaml
 kubectl -n kube-system set env daemonset/calico-node FELIX_IGNORELOOSERPF=true
 kubectl -n kube-system get pods | grep calico-node

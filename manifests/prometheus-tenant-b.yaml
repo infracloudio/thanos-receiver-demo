@@ -114,7 +114,6 @@ spec:
     protocol: TCP
     targetPort: web
   selector:
-    app: prometheus
     prometheus: tenant-b-prometheus
   sessionAffinity: None
   type: ClusterIP
